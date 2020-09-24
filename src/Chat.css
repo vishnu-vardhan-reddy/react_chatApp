@@ -1,0 +1,175 @@
+.chat {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat__header {
+  padding: 20px 0px 0px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.header > p {
+  border-bottom: 1px solid lightgray;
+  color: gray;
+  padding-left: 70px;
+}
+.chat__headerInfo {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.chat__message {
+  position: relative;
+  font-size: 16px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: fit-content;
+  margin-bottom: 30px;
+}
+
+.chat__reciever {
+  margin-left: auto;
+  padding-right: 10px;
+  background-color: #dcf8c6;
+}
+
+.chat__sender {
+  position: absolute;
+  left: 0px;
+  top: -15px;
+  padding-left: 5px;
+  font-weight: 800;
+  font-size: xx-small;
+}
+
+.chat__timestamp {
+  margin-left: 10px;
+  font-size: xx-small;
+}
+
+.text__ellipsis {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat__expandMore {
+  display: none;
+}
+
+.chat__message:hover > .text__ellipsis > .chat__expandMore {
+  display: inline;
+}
+
+.chat__headerInfo > h3 {
+  font-weight: 500;
+}
+
+.chat__headerRight {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 100px;
+}
+
+.chat__body {
+  width: 100%;
+  height: 80%;
+  padding: 30px 0px 30px 30px;
+  background-image: url("https://ghostcode.in/wp-content/uploads/2016/09/super_hero_whatsapp_background_by_x_ama-d8fr7iz.jpg");
+  background-repeat: repeat;
+  background-position: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.chat__goBack {
+  display: none;
+}
+
+.chat__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 10px;
+  height: auto;
+  border-top: 1px solid lightgray;
+}
+
+.chat__footer > form {
+  flex: 1;
+  display: flex;
+}
+
+.chat__footer > form > textarea {
+  flex: 1;
+  border-radius: 30px;
+  font-size: large;
+  outline-width: 0;
+  overflow: hidden;
+  resize: none;
+  padding: 10px;
+  border: none;
+}
+
+.chat__footer > form > .button {
+  width: 5vw;
+  color: black;
+  border-radius: 999px;
+  cursor: pointer;
+  outline-width: 0;
+  height: auto;
+}
+.chat__footer > .MuiSvgIcon-root {
+  color: grey;
+  margin: 10px;
+}
+
+/* .text {
+    position: relative;
+    font-size: 14px;
+    color: black;
+    width: 250px; /* Could be anything you like. 
+  }
+   
+  .chat__messageLength {
+    position: relative;
+    display: inline-block;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 3.6em; 
+    line-height: 1.2em;
+    text-align:justify;
+  }
+  
+  .text.ellipsis::after {
+    content: "...";
+    position: absolute;
+    right: -12px; 
+    bottom: 4px;
+  } */
+.chat__messageLength {
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: auto;
+  max-height: auto;
+  -webkit-line-clamp: auto;
+  -webkit-box-orient: vertical;
+}
+
+@media screen and (max-width: 800px) {
+  .chat {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .chat__goBack {
+    display: inline-block;
+    padding: 10px;
+  }
+}
